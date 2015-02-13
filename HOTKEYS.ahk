@@ -1,3 +1,10 @@
+~r::
+	ic()
+	SendInput t
+	SendInput {up}
+	SendInput {enter}
+return
+
 ~y::
 	ic()
 	if(IsPlayerDriver())
