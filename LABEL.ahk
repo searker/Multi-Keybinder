@@ -6,3 +6,11 @@ LockCheck:
 	if(GetVehicleLockState()==0)
 		SendChat("/lock")
 return
+
+dr:
+	Reload
+return
+
+dq:
+	ExitApp
+return
