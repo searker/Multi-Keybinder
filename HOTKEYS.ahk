@@ -45,7 +45,7 @@ return
 return
 
 ~^o::
-	ic("o")
+	ic()
 	SendChat("/cargo")
 return
 
