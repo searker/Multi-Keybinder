@@ -1,4 +1,9 @@
-﻿#Include samp.ahk
+﻿#IfWinActive, GTA:SA:MP
+#SingleInstance, Force
+#UseHook, On
+#NoEnv
+
+#Include samp.ahk
 #Include INI.ahk
 #Include TIMER.ahk
 #Include FUNKTIONEN.ahk
