@@ -49,7 +49,7 @@ return
 	SendChat("/cargo")
 return
 
-o::
+~o::
 	ic()
 	SendChat("/opencargo")
 return
@@ -61,6 +61,11 @@ return
 	else
 		SendChat("/exit")
 return
+
+~n::
+	ic()
+	SendInput t/notafk{space}
+return	
 
 ~Numpad1::
 	SendChat("/drugs buy 60")
