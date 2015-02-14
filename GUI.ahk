@@ -1,39 +1,39 @@
 gui, main:font, , Courier New
-gui, main:add, GroupBox, x10 y10 w370 h122 Section Center, Befehle
+gui, main:add, GroupBox, x10 y10 w280 h122 Section Center, Befehle ; w370
 
 gui, main:font, ,
-gui, main:add, Button, xs+10 ys+20 w80 h40, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
+gui, main:add, Button, xs+10 ys+20 w80 h40, Allgemein
+gui, main:add, Button, xp+90 yp wp hp, Berufe
+gui, main:add, Button, xp+90 yp wp hp, Belegbare Hotkeys
+;~ gui, main:add, Button, xp+90 yp wp hp, 
 
-gui, main:add, Button, xs+10 ys+70 wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
+gui, main:add, Button, xs+10 ys+70 wp hp, Automatische Systeme
+gui, main:add, Button, xp+90 yp wp hp, MDC
+gui, main:add, Button, xp+90 yp wp hp, Freunde / Feinde
+;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
 gui, main:font, , Courier New
-gui, main:add, GroupBox, xs ys+132 w370 h72 Section Center, Overlay
+gui, main:add, GroupBox, xs ys+132 w280 h72 Section Center, Overlay
 
 gui, main:font, ,
-gui, main:add, Button, xs+10 ys+20 w80 h40, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
+gui, main:add, Button, xs+10 ys+20 w80 h40, Allgemein
+gui, main:add, Button, xp+90 yp wp hp, Berufe
+gui, main:add, Button, xp+90 yp wp hp, Fahrzeug
+;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
 gui, main:font, , Courier New
-gui, main:add, GroupBox, xs ys+82 w370 h72 Section Center, Einstellungen
+gui, main:add, GroupBox, xs ys+82 w280 h72 Section Center, Sonstiges
 
 gui, main:font, ,
-gui, main:add, Button, xs+10 ys+20 w80 h40, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
-gui, main:add, Button, xp+90 yp wp hp, 
+gui, main:add, Button, xs+10 ys+20 w80 h40, Einstellungen
+gui, main:add, Button, xp+90 yp wp hp, Update
+gui, main:add, Button, xp+90 yp wp hp, Beenden
+;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
-gui, main:show, w390 h310, Multi-Keybinder
+gui, main:show, w300 h310, Multi-Keybinder ;w390
 
 
 
