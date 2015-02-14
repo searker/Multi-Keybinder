@@ -33,6 +33,9 @@ gui, main:add, Button, xp+90 yp wp hp, Beenden
 ;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
+gui, main:font, , Courier New
+gui, main:add, text, x150 y296, © Logan.Miller, 2015
+
 gui, main:show, w300 h310, Multi-Keybinder ;w390
 
 
@@ -43,7 +46,9 @@ gui, debug:show, x1700 y900 w180, Debug
 
 return
 
-
+mainGuiClose:
+	ExitApp
+	return
 
 debugGuiClose:
 	return
