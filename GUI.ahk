@@ -29,7 +29,7 @@ gui, main:add, GroupBox, xs ys+82 w280 h72 Section Center, Sonstiges
 gui, main:font, ,
 gui, main:add, Button, xs+10 ys+20 w80 h40, Einstellungen
 gui, main:add, Button, xp+90 yp wp hp, Update
-gui, main:add, Button, xp+90 yp wp hp, Beenden
+gui, main:add, Button, xp+90 yp wp hp gg_beenden, Beenden
 ;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
@@ -45,6 +45,9 @@ gui, debug:add, button, x50 w80 h30 gdq, Quit
 gui, debug:show, x1700 y900 w180, Debug
 
 return
+
+g_beenden:
+	ExitApp
 
 mainGuiClose:
 	ExitApp
