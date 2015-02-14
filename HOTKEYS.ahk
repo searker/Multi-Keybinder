@@ -68,14 +68,17 @@ return
 return	
 
 ~Numpad1::
+	ic()
 	SendChat("/drugs buy 60")
 return
 
 ~Numpad2::
+	ic()
 	SendChat("/drugprice")
 return
 
 ~Numpad4::
+	ic()
 	if(A_Hour >= 10 && A_Hour <20)
 		SendChat("Guten Tag, wie kann ich Ihnen helfen?")
 	if(A_Hour >= 20)
@@ -87,6 +90,7 @@ return
 return
 
 ~^Numpad4::
+	ic()
 	if(A_Hour >= 10 && A_Hour <20)
 		SendChat("Ich wünsche Ihnen noch einen schönen Tag.")
 	if(A_Hour >= 20)
