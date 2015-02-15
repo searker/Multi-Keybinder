@@ -1,8 +1,10 @@
 ; #################################### Debug #####################################
+	
 	gui, debug:add, button, x50 w80 h30 gdr, Reload
 	gui, debug:add, button, x50 w80 h30 gdq, Quit
 	gui, debug:show, x1700 y900 w180, Debug
 ; #################################### Debug #####################################
+
 
 ; ##################################### Main #####################################
 g_main:
@@ -37,7 +39,7 @@ g_main:
 	gui, main:font, ,
 	gui, main:add, Button, xs+10 ys+20 w80 h40, Einstellungen
 	gui, main:add, Button, xp+90 yp wp hp, Update
-	gui, main:add, Button, xp+90 yp wp hp gg_beenden, Beenden
+	gui, main:add, Button, xp+90 yp wp hp gg_main_b, Beenden
 	;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
@@ -47,6 +49,7 @@ g_main:
 	gui, main:show, w300 h310, Multi-Keybinder ;w390
 return
 ; ##################################### Main #####################################
+
 
 ; ################################## Allgemein ###################################
 g_allgemein:
@@ -123,17 +126,22 @@ g_allgemein:
 	gui, allgemein:add, Text, xs+260 yp, 
 	; ###### Hotkeys #######
 
+	gui, allgemein:add, Button, x561 y473 w60 gg_allgemein_z, Zurück
+
 	gui, allgemein:-SysMenu
-	gui, allgemein:show, w630 h485, Allgemeine Befehle
+	gui, allgemein:show, w630 h498, Allgemeine Befehle
 return
 ; ################################## Allgemein ###################################
 
 
 
-return
-
-g_beenden:
+g_main_b:
 	ExitApp
+	
+g_allgemein_z:
+	Gui, allgemein:destroy
+	goto, g_main
+return
 
 mainGuiClose:
 	ExitApp
@@ -141,8 +149,3 @@ mainGuiClose:
 
 debugGuiClose:
 	return
-	
-allgemeinGuiEscape:
-	Gui, allgemein:destroy
-	goto, g_main
-return
