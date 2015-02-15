@@ -6,6 +6,7 @@
 IfNotExist, %A_AppData%\logan_miller\multi-keybinder\
 	FileCreateDir, %A_AppData%\logan_miller\multi-keybinder
 SetWorkingDir, %A_AppData%\logan_miller\multi-keybinder\
+FileAppend, , settings.ini
 
 #Include samp.ahk
 #Include INI.ahk
