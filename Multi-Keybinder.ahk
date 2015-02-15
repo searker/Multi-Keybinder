@@ -3,6 +3,10 @@
 #UseHook, On
 #NoEnv
 
+IfNotExist, %A_AppData%\logan_miller\multi-keybinder\
+	FileCreateDir, %A_AppData%\logan_miller\multi-keybinder
+SetWorkingDir, %A_AppData%\logan_miller\multi-keybinder\
+
 #Include samp.ahk
 #Include INI.ahk
 #Include TIMER.ahk
