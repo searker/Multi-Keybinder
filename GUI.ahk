@@ -2,7 +2,7 @@
 	
 	gui, debug:add, button, x50 w80 h30 gdr, Reload
 	gui, debug:add, button, x50 w80 h30 gdq, Quit
-	gui, debug:show, x1700 y900 w180, Debug
+	gui, debug:show, x1150 y600 w180, Debug ;x1700 y900
 ; #################################### Debug #####################################
 
 
@@ -18,7 +18,7 @@ g_main:
 	gui, main:add, Button, xp+90 yp wp hp, Belegbare Hotkeys
 	;~ gui, main:add, Button, xp+90 yp wp hp, 
 
-	gui, main:add, Button, xs+10 ys+70 wp hp, Automatische Systeme
+	gui, main:add, Button, xs+10 ys+70 gg_autosys wp hp, Automatische Systeme
 	gui, main:add, Button, xp+90 yp wp hp, MDC
 	gui, main:add, Button, xp+90 yp wp hp, Freunde / Feinde
 	;~ gui, main:add, Button, xp+90 yp wp hp, 
@@ -40,7 +40,7 @@ g_main:
 	gui, main:font, ,
 	gui, main:add, Button, xs+10 ys+20 w80 h40, Einstellungen
 	gui, main:add, Button, xp+90 yp wp hp, Update
-	gui, main:add, Button, xp+90 yp wp hp gg_main_b, Beenden
+	gui, main:add, Button, xp+90 yp wp hp gg_main_z, Beenden
 	;~ gui, main:add, Button, xp+90 yp wp hp, 
 
 
@@ -138,13 +138,47 @@ return
 ; ################################## Allgemein ###################################
 
 
+; ############################ automatische Systeme ##############################
+g_autosys:
+{
+	gui, main:destroy
+	
+	gui, autosys:add, GroupBox, x10 y10 w510 h460 section,
+	gui, autosys:font, , Courier New
+	gui, autosys:add, Text, xs+25 ys+15, Funktion
+	gui, autosys:add, Text, xs+220 yp, Beschreibung
+	
+	gui, autosys:font, , 
+	gui, autosys:add, Checkbox, xs+10 ys+35 Checked%v_lockcheck% vv_lockcheck, / lock - Überprüfung
+	gui, autosys:add, Text, xs+230 yp, Schließt das Fahrzeug ab, wenn der Motor läuft.`nNach aufschließen via X wird für 5 Sekunden pausiert.
+	
+	gui, autosys:add, Button, x431 y473 w60 gg_autosys_z, Zurück
+	gui, autosys:add, Button, x361 y473 w60 gg_autosys_s, Speichern
+	
+	gui, autosys:show, w530 h498, Automatische Systeme
+}
+return
+; ############################ automatische Systeme ##############################
 
-g_main_b:
+
+
+g_main_z:
 	ExitApp
 	
 g_allgemein_z:
 	Gui, allgemein:destroy
 	goto, g_main
+return
+
+g_autosys_z:
+	Gui, autosys:destroy
+	goto, g_main
+return
+
+g_autosys_s:
+	gui, autosys:submit, nohide
+
+	IniWrite, %v_lockcheck%, settings.ini, autosys, lockcheck
 return
 
 mainGuiClose:

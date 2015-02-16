@@ -9,7 +9,7 @@ SetWorkingDir, %A_AppData%\logan_miller\multi-keybinder\
 FileAppend, , settings.ini
 
 #Include samp.ahk
-#Include overlay.ahk
+;~ #Include overlay.ahk
 #Include INI.ahk
 #Include TIMER.ahk
 #Include FUNKTIONEN.ahk
