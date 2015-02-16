@@ -8,6 +8,7 @@
 
 ; ##################################### Main #####################################
 g_main:
+{
 	gui, main:font, , Courier New
 	gui, main:add, GroupBox, x10 y10 w280 h122 Section Center, Befehle ; w370
 
@@ -47,12 +48,14 @@ g_main:
 	gui, main:add, text, x150 y296, © Logan.Miller, 2015
 
 	gui, main:show, w300 h310, Multi-Keybinder ;w390
+}
 return
 ; ##################################### Main #####################################
 
 
 ; ################################## Allgemein ###################################
 g_allgemein:
+{
 	gui, main:destroy
 	
 	; ##### Hotstrings #####
@@ -130,6 +133,7 @@ g_allgemein:
 
 	gui, allgemein:-SysMenu
 	gui, allgemein:show, w630 h498, Allgemeine Befehle
+}
 return
 ; ################################## Allgemein ###################################
 

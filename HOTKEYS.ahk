@@ -1,11 +1,14 @@
 ~r::
+{
 	ic()
 	SendInput t
 	SendInput {up}
 	SendInput {enter}
+}
 return
 
 ~y::
+{
 	ic()
 	if(IsPlayerDriver())
 	{
@@ -31,9 +34,11 @@ return
 			}
 		}
 	}
+}
 return
 
 ~x::
+{
 	ic()
 	if(IsPlayerInAnyVehicle())
 	{
@@ -42,6 +47,7 @@ return
 	}
 	else
 		SendChat("/carlock")
+}
 return
 
 ~^o::
@@ -55,11 +61,13 @@ return
 return
 
 ~j::
+{
 	ic()
 	if(GetPlayerInteriorId() == 0)
 		SendChat("/enter")
 	else
 		SendChat("/exit")
+}
 return
 
 ~n::
@@ -78,6 +86,7 @@ return
 return
 
 ~Numpad4::
+{
 	ic()
 	if(A_Hour >= 10 && A_Hour <20)
 		SendChat("Guten Tag, wie kann ich Ihnen helfen?")
@@ -87,9 +96,11 @@ return
 		SendChat("Wie kann ich Ihnen helfen?")
 	if(A_Hour >= 05 && A_Hour <10)
 		SendChat("Guten Morgen, wie kann ich Ihnen helfen?")
+}
 return
 
 ~^Numpad4::
+{
 	ic()
 	if(A_Hour >= 10 && A_Hour <20)
 		SendChat("Ich wünsche Ihnen noch einen schönen Tag.")
@@ -99,4 +110,5 @@ return
 		SendChat("Auf Wiedersehen.")
 	if(A_Hour >= 05 && A_Hour <10)
 		SendChat("Ich wünsche Ihnen noch einen schönen Morgen.")
+}
 return
